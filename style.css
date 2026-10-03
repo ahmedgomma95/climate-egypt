@@ -1,170 +1,278 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* 1. التمرير السلس */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 2. ضبط الأساسيات */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f9f4;
-    color: #2d3748;
-    text-align: center;
-}
-
-.hero {
-    background: #1b5e20;
-    color: white;
-    padding-bottom: 20px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    overflow: hidden;
-}
-
-.hero-image-container {
-    position: relative;
-    width: 100%;
-    max-height: 380px;
-    overflow: hidden;
-}
-
-.hero-img {
-    width: 100%;
-    height: 380px;
-    object-fit: cover;
-    display: block;
-}
-
-.hero-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
-    padding: 20px;
-}
-
-.hero-overlay h1 {
-    margin: 0 0 10px 0;
-    font-size: 28px;
-    color: #ffffff;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
-}
-
-.hero-overlay p {
-    margin: 0;
-    font-size: 16px;
-    color: #e8f5e9;
-}
-
-.goals {
-    background: rgba(255, 255, 255, 0.15);
-    display: inline-block;
-    padding: 15px 25px;
-    border-radius: 10px;
-    margin-top: 15px;
-    text-align: right;
-    max-width: 80%;
-}
-
-.container {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 0 15px;
-}
-
-.card {
-    background: white;
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    text-align: right;
-}
-
-form label {
-    display: block;
-    margin: 10px 0 5px;
-    font-weight: bold;
-}
-
-form input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-button {
-    background-color: #2e7d32;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%;
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
 }
 
-button:hover {
-    background-color: #1b5e20;
-}
-
-.result-box {
-    margin-top: 15px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #1b5e20;
-}
-
-/* تنسيق الأزرار والبطاقات التفاعلية */
-.interactive-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 15px;
-}
-
-.tech-card {
-    background-color: #e8f5e9;
-    border-right: 5px solid #2e7d32;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-
-.tech-toggle {
-    background: #e8f5e9;
-    border: none;
-    width: 100%;
-    padding: 15px;
-    font-size: 17px;
-    font-weight: bold;
-    color: #1b5e20;
+/* 3. القائمة العلوية */
+header {
+    background: #1b4332;
+    color: #fff;
+    padding: 1rem 4%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header .logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 12px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #52b788;
+}
+
+/* 4. الواجهة الرئيسية - صورة واضحة تماماً */
+.hero {
+    background: url('hero.jpg') center/cover no-repeat,
+                url('hero.jpg.jpg') center/cover no-repeat,
+                url('hero.jfif') center/cover no-repeat,
+                url('hero.png') center/cover no-repeat;
+    background-color: #1b4332;
+    color: #ffffff;
+    text-align: center;
+    padding: 140px 20px;
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.9);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+}
+
+/* 5. الأقسام العامة */
+.section {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.bg-light {
+    background-color: #e9f5ed;
+}
+
+.section h2 {
+    color: #1b4332;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* 6. حاوية الرسم البياني */
+.chart-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* 7. بطاقات الخدمات والمبادرات */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: right;
+    border-top: 4px solid #40916c;
+}
+
+.card h3 {
+    color: #1b4332;
+    margin-bottom: 12px;
+}
+
+/* 8. صندوق الحاسبة والمسابقة */
+.calculator-box {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 16px;
+    border: 1px solid #d8f3dc;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    text-align: right;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #2d6a4f;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #b7e4c7;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.btn-calc {
+    width: 100%;
+    background: #2d6a4f;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-calc:hover {
+    background: #1b4332;
+}
+
+.result-box {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    display: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* 9. تنسيق اختبار الوعي المناخي Quiz */
+.quiz-question {
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: #1b4332;
+    margin-bottom: 20px;
+}
+
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.quiz-opt {
+    background: #f0fdf4;
+    border: 1px solid #b7e4c7;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 0.98rem;
     cursor: pointer;
     text-align: right;
+    transition: all 0.2s ease;
+    color: #2d6a4f;
+    font-weight: 600;
 }
 
-.tech-toggle:hover {
-    background-color: #c8e6c9;
+.quiz-opt:hover {
+    background: #2d6a4f;
+    color: #fff;
 }
 
-.tech-content {
-    display: none; /* إخفاء التفاصيل افتراضياً */
-    padding: 15px;
-    color: #2d3748;
-    line-height: 1.6;
-    border-top: 1px dashed #a5d6a7;
-    background-color: #ffffff;
+/* 10. تنسيق الأسئلة الشائعة FAQ */
+.faq-container {
+    max-width: 750px;
+    margin: 0 auto;
     text-align: right;
 }
 
-.tech-content p {
-    margin: 0;
+.faq-item {
+    background: #fff;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    overflow: hidden;
 }
 
-.exit-btn {
-    background-color: #c62828;
-    width: auto;
-    margin-bottom: 20px;
+.faq-question {
+    width: 100%;
+    padding: 18px 20px;
+    background: #fff;
+    border: none;
+    text-align: right;
+    font-size: 1.05rem;
+    font-weight: bold;
+    color: #1b4332;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question span {
+    font-size: 1.3rem;
+    color: #2d6a4f;
+}
+
+.faq-answer {
+    padding: 0 20px 18px;
+    display: none;
+    color: #555;
+    font-size: 0.95rem;
+    border-top: 1px solid #f0f0f0;
+}
+
+/* 11. التذييل */
+footer {
+    background: #1b4332;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
 }

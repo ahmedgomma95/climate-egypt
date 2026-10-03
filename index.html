@@ -3,275 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تكنولوجيا المناخ في مصر</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f9f4;
-            color: #2d3748;
-            text-align: center;
-        }
-
-        .hero {
-            background: #1b5e20;
-            color: white;
-            padding-bottom: 20px;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-            overflow: hidden;
-        }
-
-        .hero-image-container {
-            position: relative;
-            width: 100%;
-            max-height: 380px;
-            overflow: hidden;
-        }
-
-        .hero-img {
-            width: 100%;
-            height: 380px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
-            padding: 20px;
-        }
-
-        .hero-overlay h1 {
-            margin: 0 0 10px 0;
-            font-size: 28px;
-            color: #ffffff;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
-        }
-
-        .hero-overlay p {
-            margin: 0;
-            font-size: 16px;
-            color: #e8f5e9;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 0 15px;
-        }
-
-        .card {
-            background: white;
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-            text-align: right;
-        }
-
-        .card h2 {
-            color: #1b5e20;
-            margin-top: 0;
-        }
-
-        form label {
-            display: block;
-            margin: 10px 0 5px;
-            font-weight: bold;
-        }
-
-        form input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            box-sizing: border-box;
-            font-size: 15px;
-        }
-
-        .btn {
-            background-color: #2e7d32;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 16px;
-            width: 100%;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-
-        .btn:hover {
-            background-color: #1b5e20;
-        }
-
-        .result-box {
-            margin-top: 15px;
-            font-size: 18px;
-            font-weight: bold;
-            color: #1b5e20;
-        }
-
-        /* تنسيق الأزرار والبطاقات التفاعلية */
-        .interactive-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-top: 15px;
-        }
-
-        .tech-card {
-            background-color: #e8f5e9;
-            border-right: 5px solid #2e7d32;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-
-        .tech-toggle {
-            background: #e8f5e9;
-            border: none;
-            width: 100%;
-            padding: 15px;
-            font-size: 17px;
-            font-weight: bold;
-            color: #1b5e20;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-            text-align: right;
-        }
-
-        .tech-toggle:hover {
-            background-color: #c8e6c9;
-        }
-
-        .tech-content {
-            display: none;
-            padding: 15px;
-            color: #2d3748;
-            line-height: 1.6;
-            border-top: 1px dashed #a5d6a7;
-            background-color: #ffffff;
-            text-align: right;
-        }
-
-        .tech-content p {
-            margin: 0;
-        }
-    </style>
+    <title>منصة مصر الذكية للعمل المناخي | Climate Egypt</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- مكتبة Chart.js للرسم البياني التفاعلي -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
-    <!-- قسم الهيدر مع الصورة -->
-    <header class="hero">
-        <div class="hero-image-container">
-            <img src="hero.jpg" alt="تكنولوجيا المناخ" class="hero-img">
-            <div class="hero-overlay">
-                <h1>التكنولوجيا الذكية لمواجهة التغير المناخي في مصر</h1>
-                <p>حلول برمجية وابتكارات رقمية للحد من الانبعاثات الكربونية وتعزيز الاستدامة البيئية</p>
-            </div>
-        </div>
+    <!-- القائمة العلوية -->
+    <header>
+        <div class="logo">مصر الذكية للمناخ 🌿</div>
+        <nav>
+            <ul>
+                <li><a href="#hero">الرئيسية</a></li>
+                <li><a href="#suez">مبادرة السويس</a></li>
+                <li><a href="#stats">المؤشرات</a></li>
+                <li><a href="#services">الخدمات الذكية</a></li>
+                <li><a href="#actions">كيف تساهم؟</a></li>
+                <li><a href="#quiz">اختبر وعيك</a></li>
+                <li><a href="#school-calc">حاسبة المدرسة</a></li>
+                <li><a href="#calculator">حاسبة الكربون</a></li>
+                <li><a href="#faq">الأسئلة الشائعة</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <div class="container">
+    <!-- الواجهة الرئيسية -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>منصة مصر الذكية للعمل المناخي</h1>
+            <p>حلول تكنولوجية وتفاعلية لدعم جهود الدولة المصرية في مواجهة التغيرات المناخية وتحقيق التنمية المستدامة.</p>
+        </div>
+    </section>
 
-        <!-- مجالات التكنولوجيا الذكية -->
-        <div class="card">
-            <h2>💡 مجالات واستخدامات التكنولوجيا الذكية للمناخ (اضغط للتفاصيل)</h2>
-            <div class="interactive-grid">
-                
-                <div class="tech-card">
-                    <button class="tech-toggle" onclick="toggleDetails('solar')">
-                        <span>🌞 محطات الطاقة الشمسية والرياح</span>
-                        <span>▼</span>
-                    </button>
-                    <div id="solar" class="tech-content">
-                        <p>استخدام الحساسات الذكية وأنظمة التتبع الشمسي لرفع كفاءة توليد الطاقة النظيفة وتقليل الانبعاثات الكربونية.</p>
-                    </div>
-                </div>
-
-                <div class="tech-card">
-                    <button class="tech-toggle" onclick="toggleDetails('agri')">
-                        <span>🌾 الزراعة الرقمية والري الذكي</span>
-                        <span>▼</span>
-                    </button>
-                    <div id="agri" class="tech-content">
-                        <p>مراقبة المحاصيل عبر الأقمار الصناعية والذكاء الاصطناعي وترشيد استهلاك مياه الري بنسبة تصل إلى 30%.</p>
-                    </div>
-                </div>
-
-                <div class="tech-card">
-                    <button class="tech-toggle" onclick="toggleDetails('transport')">
-                        <span>🚆 النقل الكهربائي المستدام</span>
-                        <span>▼</span>
-                    </button>
-                    <div id="transport" class="tech-content">
-                        <p>دعم خطوط المونوريل والقطار الكهربائي السريع وإدارة شبكات الشحن بالذكاء الاصطناعي للحفاظ على الهواء نقياً.</p>
-                    </div>
-                </div>
-
-                <div class="tech-card">
-                    <button class="tech-toggle" onclick="toggleDetails('waste')">
-                        <span>♻️ إدارة وإعادة تدوير النفايات</span>
-                        <span>▼</span>
-                    </button>
-                    <div id="waste" class="tech-content">
-                        <p>استخدام الحاويات الذكية وتحليل البيانات لفرز وتدوير المخلفات بفعالية لتحقيق الإدارة البيئية المستدامة.</p>
-                    </div>
-                </div>
-
+    <!-- شريط الأثر المتوقع والمستهدفات -->
+    <section class="section bg-light">
+        <div class="cards-grid">
+            <div class="card" style="text-align: center; border-top-color: #2d6a4f;">
+                <h3 style="font-size: 2rem; color: #2d6a4f;">+10,000</h3>
+                <p>طالب ومواطن مستفيد</p>
+            </div>
+            <div class="card" style="text-align: center; border-top-color: #2d6a4f;">
+                <h3 style="font-size: 2rem; color: #2d6a4f;">50+</h3>
+                <p>مدرسة مشاركة في المبادرة</p>
+            </div>
+            <div class="card" style="text-align: center; border-top-color: #2d6a4f;">
+                <h3 style="font-size: 2rem; color: #2d6a4f;">15%</h3>
+                <p>خفض متوقع في الانبعاثات الفردية</p>
             </div>
         </div>
+    </section>
 
-        <!-- حاسبة البصمة الكربونية -->
-        <div class="card">
-            <h2>📊 حاسبة البصمة الكربونية التقديرية</h2>
-            <form id="calcForm" onsubmit="event.preventDefault(); calculateImpact();">
-                <label for="electricity">استهلاك الكهرباء الشهري (كيلوواط/ساعة):</label>
-                <input type="number" id="electricity" placeholder="مثال: 250" required>
+    <!-- قسم خاص بمبادرة محافظة السويس الخضراء -->
+    <section id="suez" class="section">
+        <h2>🌊 مبادرة السويس للتحول الأخضر والتنمية المستدامة</h2>
+        <p class="subtitle">نموذج استرشادي لربط التكنولوجيا بالبيئة الساحلية والصناعية بمحافظة السويس</p>
+        
+        <div class="cards-grid">
+            <div class="card">
+                <h3>🐟 حماية الشواطئ والبيئة البحرية</h3>
+                <p>مبادرات توعوية ورقمية للحد من التلوث البحري والحفاظ على الثروة السمكية والتنوع البيولوجي بخليج السويس.</p>
+            </div>
+            <div class="card">
+                <h3>⚡ الهيدروجين الأخضر والتطوير الصناعي</h3>
+                <p>استعراض دور المنطقة الاقتصادية لقناة السويس بالسويس كمركز عالمي لإنتاج الطاقة الخضراء والوقود النظيف.</p>
+            </div>
+            <div class="card">
+                <h3>🏫 المدارس الخضراء بالسويس</h3>
+                <p>مبادرة طلابية لزرع الأشجار وترشيد استهلاك الكهرباء والمياه داخل مدارس المحافظة مع حوافز تشجيعية.</p>
+            </div>
+        </div>
+    </section>
 
-                <label for="transport">مسافة التنقل الأسبوعية بالسيارة (كيلومتر):</label>
-                <input type="number" id="transport" placeholder="مثال: 50" required>
+    <!-- قسم المؤشرات والرسم البياني -->
+    <section id="stats" class="section bg-light">
+        <h2>مؤشرات ورسومات بيانية تحليليّة</h2>
+        <p class="subtitle">رصد وتوقع مؤشرات الانبعاثات الحرارية والتطوير الأخضر في مصر</p>
+        
+        <div class="chart-container">
+            <canvas id="climateChart"></canvas>
+        </div>
+    </section>
 
-                <button type="submit" class="btn">احسب الأثر البيئي</button>
-            </form>
+    <!-- قسم الخدمات الذكية المطور -->
+    <section id="services" class="section">
+        <h2>الخدمات الرقمية والحلول الذكية</h2>
+        <p class="subtitle">تطبيقات عملية لدعم التحول الأخضر والمستدام في مصر</p>
+
+        <div class="cards-grid">
+            <div class="card">
+                <h3>🌱 الإرشاد الزراعي الذكي</h3>
+                <p>تنبؤات جوية مبكرة وتوصيات آلمية للمزارعين لحماية المحاصيل من تقلبات درجات الحرارة.</p>
+            </div>
+            <div class="card">
+                <h3>⚡ ترشيد استهلاك الطاقة</h3>
+                <p>إرشادات تفاعلية وتقنيات ذكية للحد من استهلاك الطاقة الكهربائية في المؤسسات والمنازل.</p>
+            </div>
+            <div class="card">
+                <h3>♻️ إدارة وإعادة تدوير المخلفات</h3>
+                <p>خريطة تفاعلية لربط المواطنين بالمراكز المعتمدة لتجميع وإعادة تدوير المخلفات الإلكترونية والعضوية.</p>
+            </div>
+            <div class="card">
+                <h3>🗺️️ خريطة المشروعات الخضراء</h3>
+                <p>استعراض تفاعلي لأبرز المشاريع القومية المستدامة بمصر مثل محطة بنبان للطاقة الشمسية والدلتا الجديدة.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم كيف يمكنك المساهمة؟ -->
+    <section id="actions" class="section bg-light">
+        <h2>💡 كيف يمكنك المساهمة في حماية البيئة؟</h2>
+        <p class="subtitle">خطوات بسيطة يومية تُحدث فارقاً كبيراً في التحدي المناخي</p>
+
+        <div class="cards-grid">
+            <div class="card" style="border-top-color: #2d6a4f;">
+                <h3>💡 ترشيد الإضاءة والأجهزة</h3>
+                <p>استبدال المصابيح العادية بإضاءة LED الموفرة وإيقاف تشغيل الأجهزة الإلكترونية عند عدم الاستخدام.</p>
+            </div>
+            <div class="card" style="border-top-color: #2d6a4f;">
+                <h3>🌳 التشجير ورفع المساحات الخضراء</h3>
+                <p>المشاركة في غرس الأشجار والنباتات داخل المدرسة أو المنزل لامتصاص ثاني أكسيد الكربون.</p>
+            </div>
+            <div class="card" style="border-top-color: #2d6a4f;">
+                <h3>🚶‍♂️ النقل المستدام</h3>
+                <p>استخدام المشي، الدراجات، أو وسائل النقل الجماعي لتقليل العوادم والانبعاثات الكربونية.</p>
+            </div>
+            <div class="card" style="border-top-color: #2d6a4f;">
+                <h3>🛍️ الحد من البلاستيك أحادي الاستخدام</h3>
+                <p>استخدام الحقائب القماشية والزجاجات القابلة لإعادة الاستخدام لحماية البيئة البحرية وخليج السويس.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم اختبار الوعي المناخي التفاعلي -->
+    <section id="quiz" class="section">
+        <h2>🧩 اختبر وعيك بالمناخ والطاقة الذكية</h2>
+        <p class="subtitle">أجب عن الأسئلة واكتشف مدى معرفتك بالحلول المناخية المستدامة</p>
+
+        <div class="calculator-box" style="max-width: 650px;">
+            <div class="quiz-step" id="q1">
+                <p class="quiz-question">1️⃣ ما هي أكبر محطة توليد طاقة شمسية في مصر والعالم؟</p>
+                <div class="quiz-options">
+                    <button type="button" class="quiz-opt" onclick="answerQuiz(1, true)">محطة بنبان بأسوان ☀️</button>
+                    <button type="button" class="quiz-opt" onclick="answerQuiz(1, false)">مزرعة جبل الزيت 🌬️</button>
+                    <button type="button" class="quiz-opt" onclick="answerQuiz(1, false)">السد العالي 🌊</button>
+                </div>
+            </div>
+
+            <div class="quiz-step" id="q2" style="display:none;">
+                <p class="quiz-question">2️⃣ ما الهدف الرئيسي من استخدام الهيدروجين الأخضر بالسويس؟</p>
+                <div class="quiz-options">
+                    <button type="button" class="quiz-opt" onclick="answerQuiz(2, false)">توليد المياه الصالحة للشرب</button>
+                    <button type="button" class="quiz-opt" onclick="answerQuiz(2, true)">إنتاج وقود نظيف خالٍ من الانبعاثات 🍃</button>
+                    <button type="button" class="quiz-opt" onclick="answerQuiz(2, false)">تبريد المصانع الكبرى</button>
+                </div>
+            </div>
+
+            <div class="quiz-step" id="q3" style="display:none;">
+                <p class="quiz-question">3️⃣ كم نسبة الطاقة التي توفرها مصابيح LED مقارنة بالمصابيح العادية؟</p>
+                <div class="quiz-options">
+                    <button type="button" class="quiz-opt" onclick="answerQuiz(3, false)">حوالي 20%</button>
+                    <button type="button" class="quiz-opt" onclick="answerQuiz(3, false)">حوالي 50%</button>
+                    <button type="button" class="quiz-opt" onclick="answerQuiz(3, true)">تصل إلى 80% ⚡</button>
+                </div>
+            </div>
+
+            <div id="quizResult" class="result-box"></div>
+            <button type="button" id="btnRestartQuiz" onclick="restartQuiz()" class="btn-calc" style="display:none; margin-top:15px; background:#40916c;">إعادة الاختبار 🔄</button>
+        </div>
+    </section>
+
+    <!-- حاسبة المدرسة الخضراء بالسويس -->
+    <section id="school-calc" class="section bg-light">
+        <h2>🏫 حاسبة المدرسة الخضراء بالسويس</h2>
+        <p class="subtitle">أداة تفاعلية للمدارس لتقدير الأثر البيئي واحتياجات التشجير والتوفير</p>
+
+        <div class="calculator-box" style="border-color: #2d6a4f; background: #ffffff;">
+            <div class="input-group">
+                <label for="schoolStudents">عدد طلاب المدرسة:</label>
+                <input type="number" id="schoolStudents" placeholder="مثال: 500" min="0">
+            </div>
+            <button type="button" id="btnSchoolCalc" onclick="calculateSchoolImpact()" class="btn-calc">احسب الأثر البيئي للمدرسة</button>
+
+            <div id="schoolResult" class="result-box"></div>
+        </div>
+    </section>
+
+    <!-- قسم حاسبة الانبعاثات الكربونية الشخصية -->
+    <section id="calculator" class="section">
+        <h2>حاسبة الأثر الكربوني الشخصي 🧮</h2>
+        <p class="subtitle">احسب حجم انبعاثاتك اليومية واكتشف كيف تساهم في حماية البيئة</p>
+
+        <div class="calculator-box">
+            <div class="input-group">
+                <label for="km">المسافة المقطوعة بالسيارة يومياً (كم):</label>
+                <input type="number" id="km" placeholder="مثال: 20" min="0">
+            </div>
+            <div class="input-group">
+                <label for="electricity">استهلاك الكهرباء الشهري (كيلوواط):</label>
+                <input type="number" id="electricity" placeholder="مثال: 250" min="0">
+            </div>
+            <button type="button" id="btnPersonalCalc" onclick="calculateCarbon()" class="btn-calc">حساب الأثر الكربوني</button>
+
             <div id="result" class="result-box"></div>
         </div>
+    </section>
 
-    </div>
+    <!-- قسم الأسئلة الشائعة FAQ -->
+    <section id="faq" class="section bg-light">
+        <h2>❓ الأسئلة الشائعة</h2>
+        <p class="subtitle">إجابات عن أهم الاستفسارات حول التغير المناخي والحلول التكنولوجية</p>
 
-    <!-- أكواد الجافاسكريبت -->
-    <script>
-        function calculateImpact() {
-            const elec = parseFloat(document.getElementById('electricity').value) || 0;
-            const trans = parseFloat(document.getElementById('transport').value) || 0;
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">ما هي التغيرات المناخية وكيف تؤثر على مصر؟ <span>+</span></button>
+                <div class="faq-answer">
+                    <p>التغير المناخي هو اضطراب طويل الأجل في درجات الحرارة وأنماط الطقس. تؤثر على مصر من خلال ارتفاع درجات الحرارة، وارتفاع منسوب البحر بالشرقية والإسكندرية والسويس، وتذبذب الأمطار.</p>
+                </div>
+            </div>
 
-            const co2Elec = elec * 0.85; 
-            const co2Trans = trans * 4 * 0.21; 
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">كيف تساهم التكنولوجيا والذكاء الاصطناعي في حل الأزمة؟ <span>+</span></button>
+                <div class="faq-answer">
+                    <p>من خلال أنظمة الري الذكي، والتنبؤ المبكر بالطقس لحماية المحاصيل، وتحسين كفاءة شبكات الطاقة المتجددة، ومراقبة التلوث عبر مستشعرات إنترنت الأشياء (IoT).</p>
+                </div>
+            </div>
 
-            const total = (co2Elec + co2Trans).toFixed(1);
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">لماذا تُعتبر محافظة السويس رائدة في المبادرة الخضراء؟ <span>+</span></button>
+                <div class="faq-answer">
+                    <p>بفضل موقعها الجغرافي الفريد واحتوائها على المنطقة الاقتصادية لقناة السويس، والتي تشهد أضخم مشروعات إنتاج الهيدروجين الأخضر والوقود النظيف عالمياً.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            const resultDiv = document.getElementById('result');
-            resultDiv.innerHTML = `مجموع انبعاثاتك الكربونية التقديرية: <strong>${total} كجم</strong> من ثاني أكسيد الكربون شهرياً.`;
-        }
+    <!-- التذييل -->
+    <footer>
+        <p>جميع الحقوق محفوظة © 2026 - مشروع منصة مصر الذكية للعمل المناخي | مسابقة التغيرات المناخية والتكنولوجيا - محافظة السويس</p>
+    </footer>
 
-        function toggleDetails(id) {
-            const content = document.getElementById(id);
-            if (content.style.display === "block") {
-                content.style.display = "none";
-            } else {
-                content.style.display = "block";
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
